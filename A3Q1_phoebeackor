@@ -1,0 +1,47 @@
+//Phoebe Ackor
+//Assignment 3 - Question 1
+//Draw The Catcher
+
+function setup() {
+  bearHeight = 30;
+  bearWidth = 20;
+  bearX = 0;
+  bearY = 320;
+  createCanvas(400, 400);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background(135, 206, 235);
+  fill("green");
+  rect(0, 380, 400, 20);
+  fill("white");
+  noStroke();
+  rect(80, 110, 80, 30);
+  rect(100, 90, 60, 30);
+  rect(140, 100, 80, 30);
+  rect(200, 50, 90, 30);
+  rect(230, 30, 50, 30);
+  rect(230, 150, 150, 30);
+  rect(260, 130, 80, 30);
+  rect(280, 110, 40, 30);
+  theBear(mouseX, bearY);
+}
+function theBear(x, y, size) {
+  push();
+  translate(x, y);
+  strokeWeight(1);
+  stroke("grey");
+  fill("tan");
+  ellipse(20, 50, 40); //body
+  fill("tan");
+  ellipse(20, 20, 30); //head
+  ellipse(5, 5, 10); //left ear
+  ellipse(35, 5, 10); //right ear
+  fill("pink");
+  ellipse(20, 24, 10, 6); //nose
+  fill("black");
+  ellipse(15, 18, 5); //eyes
+  ellipse(25, 18, 5);
+  pop();
+}
